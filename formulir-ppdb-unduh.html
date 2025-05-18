@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulir Pendaftaran PPDB</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h2 { color: #004080; }
+    label { display: block; margin-top: 10px; }
+    input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+    button { margin-top: 20px; padding: 10px 15px; background: #004080; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    #output { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h2>Formulir Pendaftaran PPDB</h2>
+
+  <form id="ppdbForm">
+    <label for="nama">Nama Lengkap</label>
+    <input type="text" id="nama" name="nama" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="asal">Asal Sekolah</label>
+    <input type="text" id="asal" name="asal" required />
+
+    <label for="alamat">Alamat</label>
+    <textarea id="alamat" name="alamat" required></textarea>
+
+    <button type="submit">Unduh PDF</button>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    const { jsPDF } = window.jspdf;
+
+    document.getElementById('ppdbForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById('nama').value;
+      const email = document.getElementById('email').value;
+      const asal = document.getElementById('asal').value;
+      const alamat = document.getElementById('alamat').value;
+
+      const doc = new jsPDF();
+      doc.setFontSize(14);
+      doc.text('Formulir Pendaftaran PPDB', 20, 20);
+      doc.setFontSize(12);
+      doc.text(`Nama Lengkap: ${nama}`, 20, 40);
+      doc.text(`Email: ${email}`, 20, 50);
+      doc.text(`Asal Sekolah: ${asal}`, 20, 60);
+      doc.text(`Alamat: ${alamat}`, 20, 70);
+
+      doc.save(`Formulir_PPDB_${nama.replace(/\s+/g, '_')}.pdf`);
+    });
+  </script>
+
+</body>
+</html>

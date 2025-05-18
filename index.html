@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMA Negeri 1 Raja Ampat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">SMA Negeri 1 Raja Ampat</h1>
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#ppdb">PPDB</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Selamat Datang di SMA Negeri 1 Raja Ampat</h2>
+      <p>Tempat membentuk generasi unggul dan berkarakter.</p>
+      <a href="#ppdb" class="cta-button">Daftar PPDB Sekarang</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="profil">
+      <h3>Profil Sekolah</h3>
+      <p>Informasi singkat tentang sejarah dan visi misi sekolah.</p>
+    </section>
+
+    <section id="ppdb">
+      <h3>Informasi PPDB</h3>
+      <p>Detail mengenai persyaratan dan jadwal pendaftaran.</p>
+      <a href="pdf/brosur-ppdb.pdf" download>📄 Unduh Brosur</a><br>
+      <a href="pdf/formulir-pendaftaran.pdf" download>📄 Unduh Formulir Pendaftaran</a>
+    </section>
+
+    <section id="kontak">
+      <h3>Kontak Kami</h3>
+      <p>Alamat, nomor telepon, dan email resmi sekolah.</p>
+    </section>
+  
+    <section id="formulir">
+      <h3>Formulir Pendaftaran</h3>
+      <form action="#" method="POST" class="formulir-ppdb">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="asal">Asal Sekolah:</label>
+        <input type="text" id="asal" name="asal" required>
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" name="alamat" required></textarea>
+
+        <button type="submit">Kirim Pendaftaran</button>
+      </form>
+    </section>
+
+    <section id="galeri">
+      <h3>Galeri Foto</h3>
+      <div class="galeri-grid">
+        <img src="img/hero-image.jpg" alt="Kegiatan 1">
+        <img src="img/hero-image.jpg" alt="Kegiatan 2">
+        <img src="img/hero-image.jpg" alt="Kegiatan 3">
+      </div>
+    </section>
+
+    <section id="berita">
+      <h3>Berita Terbaru</h3>
+      <article class="berita-item">
+        <h4>Pembukaan PPDB 2025</h4>
+        <p>PPDB tahun ajaran 2025 resmi dibuka mulai tanggal 1 Juni hingga 30 Juni 2025.</p>
+      </article>
+      <article class="berita-item">
+        <h4>Prestasi Siswa</h4>
+        <p>Selamat kepada siswa SMA Negeri 1 Raja Ampat yang meraih juara 1 Olimpiade Matematika tingkat Provinsi!</p>
+      </article>
+    </section>
+</main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SMA Negeri 1 Raja Ampat. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
