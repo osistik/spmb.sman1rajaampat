@@ -1,0 +1,1 @@
+# spmb.sman1rajaampat
